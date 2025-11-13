@@ -1,13 +1,27 @@
 import "./style.css";
 import phaser from "phaser";
-document.querySelector("#app").innerHTML = `
-  <div>
-   <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      test test
-    </p>
-  </div>
-`;
+let config = {
+  type: Phaser.AUTO,
+  width: 900,
+  height: 600,
+  physics: {
+    default: "arcade",
+    arcade: {
+      gravity: { y: 300 },
+      debug: false,
+    },
+  },
+  scene: {
+    preload: preload,
+    create: create,
+    update: update,
+  },
+};
+
+let game = new Phaser.Game(config);
+
+function preload() {}
+
+function create() {}
+
+function update() {}
